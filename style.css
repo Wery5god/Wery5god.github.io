@@ -1,0 +1,91 @@
+body {
+    font-family: "Audiowide", sans-serif;
+    background-image: url('https://abrakadabra.fun/uploads/posts/2022-02/1644902894_1-abrakadabra-fun-p-oboi-v-stile-kiberpank-1.jpg');
+    background-size: cover; /* Позволяет изображению занимать весь экран */
+    background-repeat: no-repeat; /* Запрещает повторять изображение */
+    background-attachment: fixed; /* Фиксирует изображение, чтобы оно не прокручивалось вместе со страницей */
+}
+form {
+    float: right;
+    background-color: #0084ff38;
+    padding: 20px;
+    margin:auto;
+    border-radius: 5px;
+    width: 300px;
+}
+
+
+.gradient-all {
+    font-family: "Audiowide", sans-serif;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ff00dd 30%, #03e3eb 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.3px 0.6px ;
+    border: 3px solid transparent;
+  }
+label {
+    display: block;
+    margin-bottom: px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f703ff;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: #0084ff70;
+    color: #03eb49be;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #a951be; 
+}
+.material-icons {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+/* Стили для навигационной панели */
+.panel {
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    width: 100%;
+    background-color: #06707765;
+    color: rgb(180, 32, 119);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* позволяет быть видимым при прокрутке страницы, но он будет прилипать к верхней части экрана только во время прокрутки до него */
+    top: 0px; /* Верх страницы */
+    left: 0; /* Левый край */
+    z-index: 1000; /* Чтобы находилась над другими элементами */
+  }
+  .citation {
+    background-color: #0d308f6e;
+    border: 1px solid #f300aa;
+    color: rgb(148, 10, 190);
+    font-size: 15px;
+    padding: 20px;
+    width: 300px;
+    margin: 80px auto 50px 76%; /* Отступы сверху и снизу, автоматические отступы слева, справа пришлось в % указать */
+    margin-right: 20px; /* Отступ справа */
+    
+}
+/* закрытие окна */
+.close-icon {
+    position: absolute;
+    top: 85px; 
+    right: 20px; 
+    cursor: pointer;
+    color: #b42077;
+    vertical-align: middle;
+ /* Курсор в виде указателя */
+}
+
