@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>регистрация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap icon library от сюда возьму письмо, человек,-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Google icon library а тут сердце, скрепка, комп -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- тут подключаю шрифт который более менее подойдёт  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<link type="image/x-icon" href="https://w7.pngwing.com/pngs/864/396/png-transparent-advertising-slogan-logo-cyberpunk-2077-logo-purple-angle-furniture-thumbnail.png" rel="shortcut icon">
+
+<body> 
+    <nav class="panel">
+        everything for your interests
+    </nav>
+
+    <div class="citation">
+        <span class="glyphicon glyphicon-remove close-icon"></span>
+        <p>beware, because the world is so merciless!</p>
+    </div>
+    
+    <form>
+        <!-- добавил значки -->
+        <i class="glyphicon glyphicon-envelope" style="font-size:18px; color:rgba(0, 225, 255, 0.788);"></i>
+
+        <div class="gradient-all"><label for="email">email:</label></div>
+        <input type="email" id="email" name="email" required>
+
+        <i class="material-icons" style="font-size:18px; color:rgb(0, 255, 242);">computer</i>
+        <div class="gradient-all"><label for="username">user name:</label></div>
+        <input type="text" id="username" name="username" required>
+
+        <i class="material-icons" style="font-size:18px;color:rgb(0, 174, 255);">favorite</i>
+       <div class="gradient-all"> <label for="age">age:</label></div>
+        <input type="number" id="age" name="age" min="0" required>
+
+        <i class="glyphicon glyphicon-user" style="font-size:18px;color:rgb(4, 19, 102);"></i>
+        <div class="gradient-all"><label for="gender">gender:</label></div>
+        <select id="gender" name="gender" required>
+            <div class="gradient-all"><option value="male">man</option></div>
+            <div class="gradient-all"><option value="female">woman</option></div>
+            <div class="gradient-all"><option value="female">sexless</option></div>
+            <div class="gradient-all"><option value="other">another variant</option></div>
+        </select>
+
+        <i class="material-icons" style="font: size 18pxpx;color:rgb(39, 17, 44);">attachment</i>
+        <div class="gradient-all"><label for="comments">About Me:</label></div>
+        <textarea id="comments" name="comments" rows="4" placeholder="your interests, tastes, hobbies"></textarea>
+
+        <!-- Добавляем идентификатор 'registerButton' к кнопке "register" -->
+        <input type="submit" id="registerButton" value="register" class="button">
+    </form>
+    <script>
+        // Обработка нажатия на кнопку "register"
+        document.getElementById('registerButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвращаем отправку формы
+            window.location.href = 'sait.html'; // Переход на другой HTML-файл в той же папке
+        });
+        // Обработка нажатия на иконку крестика для закрытия окна с надписью
+        document.querySelector('.close-icon').addEventListener('click', function() {
+            document.querySelector('.citation').style.display = 'none'; // Скрыть окно с надписью
+            // Вычисляем высоту панели
+            var panelHeight = document.querySelector('.panel').offsetHeight;
+            // Устанавливаем отступ формы равным высоте панели
+            document.querySelector('form').style.marginTop = panelHeight + 'px';
+        });
+    </script>
+
+</body>
+</html>
